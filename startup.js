@@ -41,7 +41,7 @@ router.get('/', function(req, res) {
 
 router.route('/ruter')
 
-    .get(function() {
+    .get(function(req, res) {
 
         var requestify = require('requestify');
 
@@ -49,7 +49,7 @@ requestify.get('http://reisapi.ruter.no/StopVisit/GetDepartures/3010330')
 .then(function(response) {
     // Get the response body (JSON parsed or jQuery object for XMLs)
     console.log(response.getBody()[0]);
-    res.json(response.getBody()[0]);
+    res.json(response.getBody());
 });
         
     });

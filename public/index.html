@@ -5,7 +5,13 @@
 </head>
 <body>
     <div id="app">
-  {{ message }}
+  <ul>
+    <li v-for="buss in akp">
+      {{ buss.MonitoredVehicleJourney.PublishedLineName}} - 
+      {{ buss.MonitoredVehicleJourney.OriginName}} -
+      {{ buss.MonitoredVehicleJourney.DestinationName}}
+    </li>
+  </ul>
 </div>
 </body>
 <script src="index.js"></script>
